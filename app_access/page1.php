@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION['level'])) {
+  $_SESSION['message'] = "No tiene acceso a la página";
+  header('Location: index.php');
+  exit();
+}
+?> 
 <!DOCTYPE html>
 <html lang="en">
 <head>

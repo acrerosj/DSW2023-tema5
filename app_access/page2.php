@@ -1,3 +1,6 @@
+<?php
+session_start();
+?> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,5 +10,15 @@
 </head>
 <body>
   <h1>Página 2</h1>
+<?php
+  if (isset($_SESSION['level'])) {
+?>
+  <h2>Contenido solo visto por usuarios registrados</h2>
+<?php
+  } else {
+    echo "<p>Esto no se ve porque no tienes permisos.</p>";
+  }
+?>
+<p>Esto es común para todos</p>  
 </body>
 </html>
