@@ -8,6 +8,9 @@
 <body>
   
 <h1>Acceso restringido</h1> 
-
+<ul>
+  <li>Usuario: <?= $_SERVER['PHP_AUTH_USER'] ?></li>
+  <li>password: <?= $_SERVER['PHP_AUTH_PW'] ?></li>
+</ul>
 </body>
 </html>
